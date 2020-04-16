@@ -5,11 +5,11 @@ Created for an undergraduate project for the course EECS 3215.
 
 ## Prerequisites
 
-To use this API on other project you need the following:  
- - LPC802 MCU  
+To use this API on other projects you need the following:  
+ - LPC80x MCU  
  - MCUXpresso Version 11.1.0 or Later 
- - LPC802 SDK  
- - Your C++ project  
+ - LPC80x SDK  
+ - Your C++ MCUXpresso project  
 
 ## Install
 
@@ -19,6 +19,10 @@ Copy the following files into your source directory:
 - /source/tuner.h
 - /source/tuner.cpp
 
+Modify the include statements in all files to reflect the correct LPC80x model you are using.
+```C++
+#define LPC802.h
+```
 
 Use the following include statements in your program:
 ```C++
@@ -48,7 +52,19 @@ Next is to initialize i2c followed by the tuner. The order is very important:
 I2Cinit(I2C_BAUD,MAIN_CLK);
 tuner.init();
 ```
-Everything is now set and you are ready to run any of the commands found in the tuner class.
+Everything is now set and you are ready to run any of the commands found in the tuner class such as:
+
+```C++
+tuner.setStation(991);
+```
+or
+```C++
+tuner.seekUp();
+```
+
+###Quick Tip!
+Commands that write data to RDA5807M update device immediately.  
+All commands that read data do not update device immediately.  
 
 ## Debugging
 
@@ -57,7 +73,7 @@ Currently adding the line:
 #define DEBUG 1
 ```
 
-Will allow you to run the program without interfacing with the device. The intention is to allow you to easily modify the buffers and see them change with not device connected.
+Will allow you to run the program without interfacing with the RDA5807M. The intention is to allow you to easily modify the buffers and see them change with no RDA5807M connected.
 
 ## Need a working example?
 
