@@ -1,0 +1,120 @@
+.TH "source/tuner.h" 3 "Wed Apr 15 2020" "Version v1.0" "RDA5807M Tuner API" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+source/tuner.h \- \fBTuner\fP API for RDA5807M FM Chip\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBTuner\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLPC_I2C0BUFFERSize\fP   (35)"
+.br
+.ti -1c
+.RI "#define \fBLPC_I2C0BAUDRate\fP   (100000)"
+.br
+.ti -1c
+.RI "#define \fBCHAN_SPACING\fP   (100000UL)"
+.br
+.ti -1c
+.RI "#define \fBCHAN_SPACING_BIT\fP   (00UL)"
+.br
+.ti -1c
+.RI "#define \fBBAND_REGION\fP   (00UL)"
+.br
+.ti -1c
+.RI "#define \fBSTART_FREQ\fP   (870)"
+.br
+.ti -1c
+.RI "#define \fBSTOP_FREQ\fP   (1080)"
+.br
+.ti -1c
+.RI "#define \fBTOTALWRITE_REG\fP   (6)"
+.br
+.ti -1c
+.RI "#define \fBTOTALREAD_REG\fP   (5)"
+.br
+.ti -1c
+.RI "#define \fBSEEKDIR_MASK\fP   (0b00000010)"
+.br
+.ti -1c
+.RI "#define \fBSEEK_TRIGGER_MASK\fP   (0b00000001)"
+.br
+.ti -1c
+.RI "#define \fBSEEK_THRESHOLD_MASK\fP   (0b00001111)"
+.br
+.ti -1c
+.RI "#define \fBTUNE_TRIGGER_MASK\fP   (0b00010000)"
+.br
+.ti -1c
+.RI "#define \fBTUNE_COMPLETE_MASK\fP   (0b01000000)"
+.br
+.ti -1c
+.RI "#define \fBBAND_MASK\fP   (0b00001100)"
+.br
+.ti -1c
+.RI "#define \fBSTERO_INDICATOR_MASK\fP   (0b00000100)"
+.br
+.ti -1c
+.RI "#define \fBSEEK_FAIL_MASK\fP   (0b00100000)"
+.br
+.ti -1c
+.RI "#define \fBSEEK_COMPLETE_MASK\fP   (0b01000000)"
+.br
+.ti -1c
+.RI "#define \fBVOLUME_MASK\fP   (0b00001111)"
+.br
+.ti -1c
+.RI "#define \fBMUTE_MASK\fP   (0b01000000)"
+.br
+.ti -1c
+.RI "#define \fBMONO_MASK\fP   (0b00100000)"
+.br
+.ti -1c
+.RI "#define \fBBASS_MASK\fP   (0b00010000)"
+.br
+.ti -1c
+.RI "#define \fBRESET_MASK\fP   (0b00000010)"
+.br
+.ti -1c
+.RI "#define \fBENABLE_MASK\fP   (0b00000001)"
+.br
+.ti -1c
+.RI "#define \fBRSSI_MASK\fP   (0b11111110)"
+.br
+.ti -1c
+.RI "#define \fBFM_TRUE_MASK\fP   (0b00000001)"
+.br
+.ti -1c
+.RI "#define \fBREADCHAN_MASK_LOW\fP   (0b11111111)"
+.br
+.ti -1c
+.RI "#define \fBREADCHAN_MASK_HIGH\fP   (0b00000011)"
+.br
+.ti -1c
+.RI "#define \fBWRITECHAN_MASK_LOW\fP   (0b11000000)"
+.br
+.ti -1c
+.RI "#define \fBWRITECHAN_MASK_HIGH\fP   (0b11111111)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBTuner\fP API for RDA5807M FM Chip\&. 
+
+All commands related to controlling chip, not including RDS commands 
+.PP
+Definition in file \fBtuner\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for RDA5807M Tuner API from the source code\&.

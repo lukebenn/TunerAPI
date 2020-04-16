@@ -1,0 +1,75 @@
+\hypertarget{_tuner_a_p_i_8cpp}{}\doxysection{source/\+Tuner\+A\+PI.cpp File Reference}
+\label{_tuner_a_p_i_8cpp}\index{source/TunerAPI.cpp@{source/TunerAPI.cpp}}
+
+
+A\+PI example and application entry point.  
+
+
+{\ttfamily \#include \char`\"{}L\+P\+C802.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tuner.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_tuner_a_p_i_8cpp_aa0eb065f10f0c20718e3c9f1afe9212e}\label{_tuner_a_p_i_8cpp_aa0eb065f10f0c20718e3c9f1afe9212e}} 
+\#define {\bfseries I2\+C\+\_\+\+B\+A\+UD}~(100000)
+\item 
+\mbox{\Hypertarget{_tuner_a_p_i_8cpp_a95f866a6a39c2c25cddfd08fc525f009}\label{_tuner_a_p_i_8cpp_a95f866a6a39c2c25cddfd08fc525f009}} 
+\#define {\bfseries M\+A\+I\+N\+\_\+\+C\+LK}~(12000000)
+\item 
+\mbox{\Hypertarget{_tuner_a_p_i_8cpp_ab66e0b16e2b560dcbc93ee06754f492a}\label{_tuner_a_p_i_8cpp_ab66e0b16e2b560dcbc93ee06754f492a}} 
+\#define {\bfseries T\+U\+N\+E\+R\+\_\+\+A\+D\+D\+R\+E\+SS}~(0x10)
+\item 
+\mbox{\Hypertarget{_tuner_a_p_i_8cpp_a526d580d324bce60a3e964066fae77e3}\label{_tuner_a_p_i_8cpp_a526d580d324bce60a3e964066fae77e3}} 
+\#define {\bfseries S\+D\+A\+\_\+\+P\+IN}~(10)
+\item 
+\mbox{\Hypertarget{_tuner_a_p_i_8cpp_a06c967e78bcedcee909a70764f879433}\label{_tuner_a_p_i_8cpp_a06c967e78bcedcee909a70764f879433}} 
+\#define {\bfseries S\+C\+L\+\_\+\+P\+IN}~(16)
+\item 
+\mbox{\Hypertarget{_tuner_a_p_i_8cpp_ad72dbcf6d0153db1b8d8a58001feed83}\label{_tuner_a_p_i_8cpp_ad72dbcf6d0153db1b8d8a58001feed83}} 
+\#define {\bfseries D\+E\+B\+UG}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_tuner_a_p_i_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{_tuner_a_p_i_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+int {\bfseries main} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_tuner_a_p_i_8cpp_aa09d1d969c4e553d1774a6946a949eb0}{Dumped\+Read\+Buf}} \mbox{[}12\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_tuner_a_p_i_8cpp_a66db7bf04b0dcabc5e34466fc45c7805}{Dumped\+Write\+Buf}} \mbox{[}12\mbox{]}
+\item 
+\mbox{\Hypertarget{_tuner_a_p_i_8cpp_a9e26469952eae86889a588acb93e03aa}\label{_tuner_a_p_i_8cpp_a9e26469952eae86889a588acb93e03aa}} 
+\mbox{\hyperlink{class_tuner}{Tuner}} {\bfseries tuner} (T\+U\+N\+E\+R\+\_\+\+A\+D\+D\+R\+E\+SS, S\+D\+A\+\_\+\+P\+IN, S\+C\+L\+\_\+\+P\+IN, M\+A\+I\+N\+\_\+\+C\+LK)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+PI example and application entry point. 
+
+Provides an example of the working program (D\+E\+B\+UG is enabled) 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_tuner_a_p_i_8cpp_aa09d1d969c4e553d1774a6946a949eb0}\label{_tuner_a_p_i_8cpp_aa09d1d969c4e553d1774a6946a949eb0}} 
+\index{TunerAPI.cpp@{TunerAPI.cpp}!DumpedReadBuf@{DumpedReadBuf}}
+\index{DumpedReadBuf@{DumpedReadBuf}!TunerAPI.cpp@{TunerAPI.cpp}}
+\doxysubsubsection{\texorpdfstring{DumpedReadBuf}{DumpedReadBuf}}
+{\footnotesize\ttfamily uint8\+\_\+t Dumped\+Read\+Buf\mbox{[}12\mbox{]}}
+
+6 16-\/bit registers with a high and low byte separated 
+
+Definition at line 75 of file Tuner\+A\+P\+I.\+cpp.
+
+\mbox{\Hypertarget{_tuner_a_p_i_8cpp_a66db7bf04b0dcabc5e34466fc45c7805}\label{_tuner_a_p_i_8cpp_a66db7bf04b0dcabc5e34466fc45c7805}} 
+\index{TunerAPI.cpp@{TunerAPI.cpp}!DumpedWriteBuf@{DumpedWriteBuf}}
+\index{DumpedWriteBuf@{DumpedWriteBuf}!TunerAPI.cpp@{TunerAPI.cpp}}
+\doxysubsubsection{\texorpdfstring{DumpedWriteBuf}{DumpedWriteBuf}}
+{\footnotesize\ttfamily uint8\+\_\+t Dumped\+Write\+Buf\mbox{[}12\mbox{]}}
+
+6 16-\/bit registers with a high and low byte separated 
+
+Definition at line 76 of file Tuner\+A\+P\+I.\+cpp.
+

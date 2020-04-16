@@ -1,0 +1,171 @@
+\hypertarget{i2c_8h}{}\doxysection{source/i2c.h File Reference}
+\label{i2c_8h}\index{source/i2c.h@{source/i2c.h}}
+
+
+Location of all common I2C commands.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{i2c_8h_a8d8fc6e1f147ffe04d4ec8c2b7a8239a}\label{i2c_8h_a8d8fc6e1f147ffe04d4ec8c2b7a8239a}} 
+\#define {\bfseries L\+P\+C\+\_\+\+I2\+C0\+B\+U\+F\+F\+E\+R\+Size}~(35)
+\item 
+\mbox{\Hypertarget{i2c_8h_a8c31b178a5f94b6b060e8f4ed88a1d29}\label{i2c_8h_a8c31b178a5f94b6b060e8f4ed88a1d29}} 
+\#define {\bfseries L\+P\+C\+\_\+\+I2\+C0\+B\+A\+U\+D\+Rate}~(100000)
+\item 
+\mbox{\Hypertarget{i2c_8h_a626a2bedb20ce291658d14291fe97aa9}\label{i2c_8h_a626a2bedb20ce291658d14291fe97aa9}} 
+\#define {\bfseries W\+K\+T\+\_\+\+F\+R\+EQ}~1000000
+\item 
+\mbox{\Hypertarget{i2c_8h_afc2be230caf5d88d5456e4bc99dafec7}\label{i2c_8h_afc2be230caf5d88d5456e4bc99dafec7}} 
+\#define {\bfseries W\+K\+T\+\_\+\+R\+E\+L\+O\+AD}~100000
+\item 
+\mbox{\Hypertarget{i2c_8h_a6c89cdaaeffc03a4aa216fce8ab9214c}\label{i2c_8h_a6c89cdaaeffc03a4aa216fce8ab9214c}} 
+\#define {\bfseries M\+S\+T\+C\+T\+L\+\_\+\+C\+O\+N\+T\+I\+N\+UE}~(1UL $<$$<$ 0)
+\item 
+\mbox{\Hypertarget{i2c_8h_ab126ce462953f73f63c0eba9c1ea279d}\label{i2c_8h_ab126ce462953f73f63c0eba9c1ea279d}} 
+\#define {\bfseries M\+S\+T\+C\+T\+L\+\_\+\+S\+T\+A\+RT}~(1UL $<$$<$ 1)
+\item 
+\mbox{\Hypertarget{i2c_8h_a886c2e90662337dba65d45d324b69de1}\label{i2c_8h_a886c2e90662337dba65d45d324b69de1}} 
+\#define {\bfseries M\+S\+T\+C\+T\+L\+\_\+\+S\+T\+OP}~(1UL $<$$<$ 2)
+\item 
+\mbox{\Hypertarget{i2c_8h_a5ae7cc0655fd2abbbc964d8556f541f8}\label{i2c_8h_a5ae7cc0655fd2abbbc964d8556f541f8}} 
+\#define {\bfseries C\+T\+L\+\_\+\+S\+L\+V\+C\+O\+N\+T\+I\+N\+UE}~(1UL $<$$<$ 0)
+\item 
+\mbox{\Hypertarget{i2c_8h_a19e352b8de5df37edbb3ec23910bfc3f}\label{i2c_8h_a19e352b8de5df37edbb3ec23910bfc3f}} 
+\#define {\bfseries C\+T\+L\+\_\+\+S\+L\+V\+N\+A\+CK}~(1UL $<$$<$ 1)
+\item 
+\mbox{\Hypertarget{i2c_8h_acde0334a9f5c6f997b9deb307d5b1502}\label{i2c_8h_acde0334a9f5c6f997b9deb307d5b1502}} 
+\#define {\bfseries M\+A\+S\+T\+E\+R\+\_\+\+S\+T\+A\+T\+E\+\_\+\+M\+A\+SK}~(0x7$<$$<$1)
+\item 
+\mbox{\Hypertarget{i2c_8h_abb77d76e741228e6b7a2ae4dffe6bc16}\label{i2c_8h_abb77d76e741228e6b7a2ae4dffe6bc16}} 
+\#define {\bfseries I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+M\+S\+T\+S\+T\+\_\+\+I\+D\+LE}~((0b000)$<$$<$1)
+\item 
+\mbox{\Hypertarget{i2c_8h_a946b4d644176188088cc6b1380bc3a97}\label{i2c_8h_a946b4d644176188088cc6b1380bc3a97}} 
+\#define {\bfseries I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+M\+S\+T\+S\+T\+\_\+\+R\+X\+R\+DY}~((0b001)$<$$<$1)
+\item 
+\mbox{\Hypertarget{i2c_8h_a320ac16bc021d6c46ed1e2554913f1ca}\label{i2c_8h_a320ac16bc021d6c46ed1e2554913f1ca}} 
+\#define {\bfseries I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+M\+S\+T\+S\+T\+\_\+\+T\+X\+R\+DY}~((0b010)$<$$<$1)
+\item 
+\mbox{\Hypertarget{i2c_8h_a48c69ccfb394169fa410ce6f0bf9e1b1}\label{i2c_8h_a48c69ccfb394169fa410ce6f0bf9e1b1}} 
+\#define {\bfseries I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+M\+S\+T\+S\+T\+\_\+\+N\+A\+C\+K\+\_\+\+A\+DD}~((0b011)$<$$<$1)
+\item 
+\mbox{\Hypertarget{i2c_8h_a45e4bcf7ce53ddf3baccf3008fb11e6b}\label{i2c_8h_a45e4bcf7ce53ddf3baccf3008fb11e6b}} 
+\#define {\bfseries I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+M\+S\+T\+S\+T\+\_\+\+N\+A\+C\+K\+\_\+\+D\+A\+TA}~((0b100)$<$$<$1)
+\item 
+\mbox{\Hypertarget{i2c_8h_a8ac921432fe7b8afcdbb5840f9adb234}\label{i2c_8h_a8ac921432fe7b8afcdbb5840f9adb234}} 
+\#define {\bfseries I2\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+D\+A\+\_\+\+P\+IN}~(10)
+\item 
+\mbox{\Hypertarget{i2c_8h_a9f43222fde608ab47752df9ad837f87f}\label{i2c_8h_a9f43222fde608ab47752df9ad837f87f}} 
+\#define {\bfseries I2\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+C\+L\+\_\+\+P\+IN}~(16)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{i2c_8h_a394e6ed780b8effde32fd02c8a1d910f}{I2\+Cinit}} (int baud, int mcu\+Clock)
+\begin{DoxyCompactList}\small\item\em Initalizes I2C module with default pins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{i2c_8h_a3e4113f39d55f6974113590b2396fb4d}{Wait\+I2\+C\+Master\+State}} (I2\+C\+\_\+\+Type $\ast$ptr\+\_\+\+L\+P\+C\+\_\+\+I2C, uint32\+\_\+t state)
+\begin{DoxyCompactList}\small\item\em Used to force program to wait until I2C bus is in correct state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{i2c_8h_a73558320a232a2f99996cc6c5ddeab42}{I2\+C\+\_\+\+Master\+Set\+Baud\+Rate}} (uint32\+\_\+t baud\+Rate\+\_\+\+Bps, uint32\+\_\+t src\+Clock\+\_\+\+Hz)
+\begin{DoxyCompactList}\small\item\em Sets the Baud rate of the I2C bus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{i2c_8h_a772911dcd3c3766d9c7b24aeb5c702d6}{I2\+C\+Change\+Pin}} (uint8\+\_\+t S\+D\+Apin, uint8\+\_\+t S\+C\+Lpin)
+\begin{DoxyCompactList}\small\item\em Changes pins assossiated with I2C bus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Location of all common I2C commands. 
+
+Includes initalization command and commands for waiting used by other device drivers. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{i2c_8h_a73558320a232a2f99996cc6c5ddeab42}\label{i2c_8h_a73558320a232a2f99996cc6c5ddeab42}} 
+\index{i2c.h@{i2c.h}!I2C\_MasterSetBaudRate@{I2C\_MasterSetBaudRate}}
+\index{I2C\_MasterSetBaudRate@{I2C\_MasterSetBaudRate}!i2c.h@{i2c.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_MasterSetBaudRate()}{I2C\_MasterSetBaudRate()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Master\+Set\+Baud\+Rate (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{baud\+Rate\+\_\+\+Bps,  }\item[{uint32\+\_\+t}]{src\+Clock\+\_\+\+Hz }\end{DoxyParamCaption})}
+
+
+
+Sets the Baud rate of the I2C bus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em baud\+Rate\+\_\+\+Bps} & in Hz (default 100Khz) \\
+\hline
+{\em src\+Clock\+\_\+\+Hz} & F\+RO clock \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 91 of file i2c.\+cpp.
+
+\mbox{\Hypertarget{i2c_8h_a772911dcd3c3766d9c7b24aeb5c702d6}\label{i2c_8h_a772911dcd3c3766d9c7b24aeb5c702d6}} 
+\index{i2c.h@{i2c.h}!I2CChangePin@{I2CChangePin}}
+\index{I2CChangePin@{I2CChangePin}!i2c.h@{i2c.h}}
+\doxysubsubsection{\texorpdfstring{I2CChangePin()}{I2CChangePin()}}
+{\footnotesize\ttfamily void I2\+C\+Change\+Pin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{S\+D\+Apin,  }\item[{uint8\+\_\+t}]{S\+C\+Lpin }\end{DoxyParamCaption})}
+
+
+
+Changes pins assossiated with I2C bus. 
+
+This command can be called multiple times given bus is idle when switched (does not check)
+
+Allows for multiple slave devices to work completly isolated from each other. Useful in some senerios
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+Apin} & Serial Data Pin \\
+\hline
+{\em S\+C\+Lpin} & Serial Clock Pin \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 123 of file i2c.\+cpp.
+
+\mbox{\Hypertarget{i2c_8h_a394e6ed780b8effde32fd02c8a1d910f}\label{i2c_8h_a394e6ed780b8effde32fd02c8a1d910f}} 
+\index{i2c.h@{i2c.h}!I2Cinit@{I2Cinit}}
+\index{I2Cinit@{I2Cinit}!i2c.h@{i2c.h}}
+\doxysubsubsection{\texorpdfstring{I2Cinit()}{I2Cinit()}}
+{\footnotesize\ttfamily void I2\+Cinit (\begin{DoxyParamCaption}\item[{int}]{baud,  }\item[{int}]{mcu\+Clock }\end{DoxyParamCaption})}
+
+
+
+Initalizes I2C module with default pins. 
+
+Initalizes I2C module by\+:
+\begin{DoxyItemize}
+\item setting the clock to on
+\item adjust the switch matrix
+\item fully reseting I2C module
+\item setting baud rate to default 100Khz, 12Mhz
+\end{DoxyItemize}
+
+\mbox{\hyperlink{i2c_8h_a73558320a232a2f99996cc6c5ddeab42}{I2\+C\+\_\+\+Master\+Set\+Baud\+Rate()}} command must be called again to adjust baude rate or declare new F\+RO speed. 
+
+Definition at line 6 of file i2c.\+cpp.
+
+\mbox{\Hypertarget{i2c_8h_a3e4113f39d55f6974113590b2396fb4d}\label{i2c_8h_a3e4113f39d55f6974113590b2396fb4d}} 
+\index{i2c.h@{i2c.h}!WaitI2CMasterState@{WaitI2CMasterState}}
+\index{WaitI2CMasterState@{WaitI2CMasterState}!i2c.h@{i2c.h}}
+\doxysubsubsection{\texorpdfstring{WaitI2CMasterState()}{WaitI2CMasterState()}}
+{\footnotesize\ttfamily void Wait\+I2\+C\+Master\+State (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Type $\ast$}]{ptr\+\_\+\+L\+P\+C\+\_\+\+I2C,  }\item[{uint32\+\_\+t}]{state }\end{DoxyParamCaption})}
+
+
+
+Used to force program to wait until I2C bus is in correct state. 
+
+Waits for I2C mater pending, then compares the master state parameter. If compare fails, enter a while(1) loop. If compare passes, return.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr\+\_\+\+L\+P\+C\+\_\+\+I2C} & A pointer to an I2C instance \\
+\hline
+{\em state} & One of the 3-\/bit Master function state codes of the I2C -\/ Refer to L\+P\+C802 manual table 187 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 72 of file i2c.\+cpp.
+

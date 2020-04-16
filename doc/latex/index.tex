@@ -1,0 +1,57 @@
+\hypertarget{index_Introduction}{}\doxysection{Introduction}\label{index_Introduction}
+This is an C++ A\+PI for operating the R\+D\+A5807M FM chip using I2C on an L\+P\+C802 M\+CU\hypertarget{index_Prerequisites}{}\doxysection{Prerequisites}\label{index_Prerequisites}
+To use this file on other project you need the following\+: ~\newline
+
+\begin{DoxyItemize}
+\item L\+P\+C802 M\+CU ~\newline
+
+\item M\+C\+Uxpresso Version X\+X.\+XX ~\newline
+
+\item L\+P\+C802 S\+DK ~\newline
+
+\item C++ project ~\newline
+
+\end{DoxyItemize}\hypertarget{index_Install}{}\doxysection{Install}\label{index_Install}
+Copy the following files into your source directory\+: ~\newline
+
+\begin{DoxyItemize}
+\item /source/i2c.h
+\item /source/i2c.cpp
+\item /source/tuner.h
+\item /source/tuner.cpp
+\end{DoxyItemize}
+
+Use the following include statements in your program\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{tuner_8h}{tuner.h}}"}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{i2c_8h}{i2c.h}}"}}
+\end{DoxyCode}
+\hypertarget{index_Usage}{}\doxysection{Usage}\label{index_Usage}
+Add these define statements (they can be changed at any time)\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define I2C\_BAUD        (100000)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MAIN\_CLK        (12000000)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define TUNER\_ADDRESS   (0x10)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define SDA\_PIN         (10)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define SCL\_PIN         (16)}}
+\end{DoxyCode}
+
+
+Define a new tuner with the following\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_tuner}{Tuner}} tuner(TUNER\_ADDRESS,SDA\_PIN,SCL\_PIN, MAIN\_CLK);}
+\end{DoxyCode}
+
+
+The I2C address is\+: {\itshape 0x10}
+
+Next is to initialize i2c followed by the tuner. The order is very important\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{i2c_8h_a394e6ed780b8effde32fd02c8a1d910f}{I2Cinit}}(I2C\_BAUD,MAIN\_CLK);}
+\DoxyCodeLine{tuner.\mbox{\hyperlink{class_tuner_afc4391a521b095c685b41f870058204f}{init}}();}
+\end{DoxyCode}
+
+
+Everything is now set and you are ready to run any of the commands found in the tuner class. 

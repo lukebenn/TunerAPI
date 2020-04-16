@@ -1,0 +1,160 @@
+.TH "source/i2c.h" 3 "Wed Apr 15 2020" "Version v1.0" "RDA5807M Tuner API" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+source/i2c.h \- Location of all common I2C commands\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLPC_I2C0BUFFERSize\fP   (35)"
+.br
+.ti -1c
+.RI "#define \fBLPC_I2C0BAUDRate\fP   (100000)"
+.br
+.ti -1c
+.RI "#define \fBWKT_FREQ\fP   1000000"
+.br
+.ti -1c
+.RI "#define \fBWKT_RELOAD\fP   100000"
+.br
+.ti -1c
+.RI "#define \fBMSTCTL_CONTINUE\fP   (1UL << 0)"
+.br
+.ti -1c
+.RI "#define \fBMSTCTL_START\fP   (1UL << 1)"
+.br
+.ti -1c
+.RI "#define \fBMSTCTL_STOP\fP   (1UL << 2)"
+.br
+.ti -1c
+.RI "#define \fBCTL_SLVCONTINUE\fP   (1UL << 0)"
+.br
+.ti -1c
+.RI "#define \fBCTL_SLVNACK\fP   (1UL << 1)"
+.br
+.ti -1c
+.RI "#define \fBMASTER_STATE_MASK\fP   (0x7<<1)"
+.br
+.ti -1c
+.RI "#define \fBI2C_STAT_MSTST_IDLE\fP   ((0b000)<<1)"
+.br
+.ti -1c
+.RI "#define \fBI2C_STAT_MSTST_RXRDY\fP   ((0b001)<<1)"
+.br
+.ti -1c
+.RI "#define \fBI2C_STAT_MSTST_TXRDY\fP   ((0b010)<<1)"
+.br
+.ti -1c
+.RI "#define \fBI2C_STAT_MSTST_NACK_ADD\fP   ((0b011)<<1)"
+.br
+.ti -1c
+.RI "#define \fBI2C_STAT_MSTST_NACK_DATA\fP   ((0b100)<<1)"
+.br
+.ti -1c
+.RI "#define \fBI2C_DEFAULT_SDA_PIN\fP   (10)"
+.br
+.ti -1c
+.RI "#define \fBI2C_DEFAULT_SCL_PIN\fP   (16)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBI2Cinit\fP (int baud, int mcuClock)"
+.br
+.RI "Initalizes I2C module with default pins\&. "
+.ti -1c
+.RI "void \fBWaitI2CMasterState\fP (I2C_Type *ptr_LPC_I2C, uint32_t state)"
+.br
+.RI "Used to force program to wait until I2C bus is in correct state\&. "
+.ti -1c
+.RI "void \fBI2C_MasterSetBaudRate\fP (uint32_t baudRate_Bps, uint32_t srcClock_Hz)"
+.br
+.RI "Sets the Baud rate of the I2C bus\&. "
+.ti -1c
+.RI "void \fBI2CChangePin\fP (uint8_t SDApin, uint8_t SCLpin)"
+.br
+.RI "Changes pins assossiated with I2C bus\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Location of all common I2C commands\&. 
+
+Includes initalization command and commands for waiting used by other device drivers\&. 
+.PP
+Definition in file \fBi2c\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void I2C_MasterSetBaudRate (uint32_t baudRate_Bps, uint32_t srcClock_Hz)"
+
+.PP
+Sets the Baud rate of the I2C bus\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbaudRate_Bps\fP in Hz (default 100Khz) 
+.br
+\fIsrcClock_Hz\fP FRO clock 
+.RE
+.PP
+
+.PP
+Definition at line 91 of file i2c\&.cpp\&.
+.SS "void I2CChangePin (uint8_t SDApin, uint8_t SCLpin)"
+
+.PP
+Changes pins assossiated with I2C bus\&. This command can be called multiple times given bus is idle when switched (does not check)
+.PP
+Allows for multiple slave devices to work completly isolated from each other\&. Useful in some senerios
+.PP
+\fBParameters\fP
+.RS 4
+\fISDApin\fP Serial Data Pin 
+.br
+\fISCLpin\fP Serial Clock Pin 
+.RE
+.PP
+
+.PP
+Definition at line 123 of file i2c\&.cpp\&.
+.SS "void I2Cinit (int baud, int mcuClock)"
+
+.PP
+Initalizes I2C module with default pins\&. Initalizes I2C module by:
+.IP "\(bu" 2
+setting the clock to on
+.IP "\(bu" 2
+adjust the switch matrix
+.IP "\(bu" 2
+fully reseting I2C module
+.IP "\(bu" 2
+setting baud rate to default 100Khz, 12Mhz
+.PP
+.PP
+\fBI2C_MasterSetBaudRate()\fP command must be called again to adjust baude rate or declare new FRO speed\&. 
+.PP
+Definition at line 6 of file i2c\&.cpp\&.
+.SS "void WaitI2CMasterState (I2C_Type * ptr_LPC_I2C, uint32_t state)"
+
+.PP
+Used to force program to wait until I2C bus is in correct state\&. Waits for I2C mater pending, then compares the master state parameter\&. If compare fails, enter a while(1) loop\&. If compare passes, return\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIptr_LPC_I2C\fP A pointer to an I2C instance 
+.br
+\fIstate\fP One of the 3-bit Master function state codes of the I2C - Refer to LPC802 manual table 187 
+.RE
+.PP
+
+.PP
+Definition at line 72 of file i2c\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for RDA5807M Tuner API from the source code\&.

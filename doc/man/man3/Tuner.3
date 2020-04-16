@@ -1,0 +1,376 @@
+.TH "Tuner" 3 "Wed Apr 15 2020" "Version v1.0" "RDA5807M Tuner API" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Tuner
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTuner\fP (uint8_t address, uint8_t SDA, uint8_t SCL, int mcuClock)"
+.br
+.RI "Construct a new \fBTuner\fP object\&. "
+.ti -1c
+.RI "void \fBinit\fP (void)"
+.br
+.RI "Resets chip, enables chip, and updates both buffers\&. "
+.ti -1c
+.RI "void \fBupdateDevice\fP (void)"
+.br
+.RI "Sends updated buffers to tuner chip\&. "
+.ti -1c
+.RI "void \fBdumpBuffers\fP (uint8_t read[12], uint8_t write[12]) const"
+.br
+.RI "dumps buffers from MCU into arrays sent to function "
+.ti -1c
+.RI "void \fBsetStation\fP (int station)"
+.br
+.RI "Set the station to tune to\&. "
+.ti -1c
+.RI "int \fBgetStation\fP ()"
+.br
+.RI "Get channel chip is tuned to currently\&. "
+.ti -1c
+.RI "int \fBsetVolume\fP (uint8_t volume)"
+.br
+.RI "Set volume of chip audio amplifier\&. "
+.ti -1c
+.RI "uint8_t \fBgetVolume\fP ()"
+.br
+.RI "Get the Volume value from buffer\&. "
+.ti -1c
+.RI "uint8_t \fBgetSignalStrength\fP ()"
+.br
+.RI "Get the Signal Strength as a 7-bit int\&. "
+.ti -1c
+.RI "void \fBresetChip\fP (bool resetReg)"
+.br
+.RI "Calling this function preforms soft reset\&. "
+.ti -1c
+.RI "void \fBenableChip\fP ()"
+.br
+.RI "Enables receiver audio amplifier of chip\&. "
+.ti -1c
+.RI "void \fBdisableChip\fP ()"
+.br
+.RI "Disables receiver audio amplifier of chip\&. "
+.ti -1c
+.RI "void \fBsetSeekSensitiviy\fP (uint8_t threshold)"
+.br
+.RI "Set the Seek Sensitivity\&. "
+.ti -1c
+.RI "void \fBseekUp\fP ()"
+.br
+.RI "Command chip to preform Auto Seek Upwards\&. "
+.ti -1c
+.RI "void \fBseekDown\fP ()"
+.br
+.RI "Command chip to preform Auto Seek Downwards\&. "
+.ti -1c
+.RI "bool \fBseekStatus\fP (void)"
+.br
+.RI "Status of most recent seek\&. "
+.ti -1c
+.RI "bool \fBseekComplete\fP (void)"
+.br
+.RI "Status of if scan is complete\&. "
+.ti -1c
+.RI "bool \fBSTstatus\fP ()"
+.br
+.RI "Is the chip receiving a stereo signal? "
+.ti -1c
+.RI "bool \fBTunedStatus\fP ()"
+.br
+.RI "Is current frequency a station? "
+.ti -1c
+.RI "void \fBforceMono\fP (bool mono)"
+.br
+.RI "Force mono signal only\&. "
+.ti -1c
+.RI "void \fBbassBoost\fP (bool bass)"
+.br
+.RI "enable bass boost option "
+.ti -1c
+.RI "void \fBmute\fP (bool mute)"
+.br
+.RI "Toggle mute option, chip will still respond\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 50 of file tuner\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Tuner::Tuner (uint8_t address, uint8_t SDA, uint8_t SCL, int mcuClock)\fC [inline]\fP"
+
+.PP
+Construct a new \fBTuner\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaddress\fP I2C Address 
+.br
+\fISDA\fP Serial Data Pin 
+.br
+\fISCL\fP Serial Clock Pin 
+.br
+\fImcuClock\fP Speed of mcu in HZ 
+.RE
+.PP
+
+.PP
+Definition at line 67 of file tuner\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Tuner::bassBoost (bool bass)"
+
+.PP
+enable bass boost option 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbass\fP 
+.RE
+.PP
+
+.PP
+Definition at line 182 of file tuner\&.cpp\&.
+.SS "void Tuner::disableChip ()"
+
+.PP
+Disables receiver audio amplifier of chip\&. 
+.PP
+Definition at line 204 of file tuner\&.cpp\&.
+.SS "void Tuner::dumpBuffers (uint8_t read[12], uint8_t write[12]) const"
+
+.PP
+dumps buffers from MCU into arrays sent to function 
+.PP
+\fBParameters\fP
+.RS 4
+\fIread[12]\fP 12 byte buffer for read data 
+.br
+\fIwrite[12]\fP 12 byte buffer for write data 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file tuner\&.cpp\&.
+.SS "void Tuner::enableChip ()"
+
+.PP
+Enables receiver audio amplifier of chip\&. 
+.PP
+Definition at line 199 of file tuner\&.cpp\&.
+.SS "void Tuner::forceMono (bool mono)"
+
+.PP
+Force mono signal only\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImono\fP 
+.RE
+.PP
+
+.PP
+Definition at line 174 of file tuner\&.cpp\&.
+.SS "uint8_t Tuner::getSignalStrength ()"
+
+.PP
+Get the Signal Strength as a 7-bit int\&. 
+.PP
+\fBReturns\fP
+.RS 4
+uint8_t strength 
+.RE
+.PP
+
+.PP
+Definition at line 116 of file tuner\&.cpp\&.
+.SS "int Tuner::getStation ()"
+
+.PP
+Get channel chip is tuned to currently\&. 
+.PP
+\fBReturns\fP
+.RS 4
+int station (Station in MHz * 10) 
+.RE
+.PP
+
+.PP
+Definition at line 82 of file tuner\&.cpp\&.
+.SS "uint8_t Tuner::getVolume ()"
+
+.PP
+Get the Volume value from buffer\&. 
+.PP
+\fBReturns\fP
+.RS 4
+uint8_t volume 
+.RE
+.PP
+
+.PP
+Definition at line 112 of file tuner\&.cpp\&.
+.SS "void Tuner::init (void)"
+
+.PP
+Resets chip, enables chip, and updates both buffers\&. 
+.PP
+Definition at line 8 of file tuner\&.cpp\&.
+.SS "void Tuner::mute (bool mute)"
+
+.PP
+Toggle mute option, chip will still respond\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImute\fP 
+.RE
+.PP
+
+.PP
+Definition at line 209 of file tuner\&.cpp\&.
+.SS "void Tuner::resetChip (bool resetReg)"
+
+.PP
+Calling this function preforms soft reset\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresetReg\fP Also reset internal buffers as well? 
+.RE
+.PP
+
+.PP
+Definition at line 190 of file tuner\&.cpp\&.
+.SS "bool Tuner::seekComplete (void)"
+
+.PP
+Status of if scan is complete\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true: Scan Complete 
+.PP
+false: Scan in progress 
+.RE
+.PP
+
+.PP
+Definition at line 146 of file tuner\&.cpp\&.
+.SS "void Tuner::seekDown ()"
+
+.PP
+Command chip to preform Auto Seek Downwards\&. 
+.PP
+Definition at line 127 of file tuner\&.cpp\&.
+.SS "bool Tuner::seekStatus (void)"
+
+.PP
+Status of most recent seek\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true: Last seek Succeeded 
+.PP
+false: Last seek Failed 
+.RE
+.PP
+
+.PP
+Definition at line 137 of file tuner\&.cpp\&.
+.SS "void Tuner::seekUp ()"
+
+.PP
+Command chip to preform Auto Seek Upwards\&. 
+.PP
+Definition at line 120 of file tuner\&.cpp\&.
+.SS "void Tuner::setSeekSensitiviy (uint8_t threshold)"
+
+.PP
+Set the Seek Sensitivity\&. Send a 4-bit number to set the signal to noise ratio of detected signal
+.PP
+\fBParameters\fP
+.RS 4
+\fIthreshold\fP (default: 1000) 
+.RE
+.PP
+
+.PP
+Definition at line 152 of file tuner\&.cpp\&.
+.SS "void Tuner::setStation (int station)"
+
+.PP
+Set the station to tune to\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstation\fP (Station in MHz * 10) 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file tuner\&.cpp\&.
+.SS "int Tuner::setVolume (uint8_t volume)"
+
+.PP
+Set volume of chip audio amplifier\&. Will return error if integer given is out of range
+.PP
+\fBParameters\fP
+.RS 4
+\fIvolume\fP (0 to 15) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int 
+.RE
+.PP
+
+.PP
+Definition at line 99 of file tuner\&.cpp\&.
+.SS "bool Tuner::STstatus ()"
+
+.PP
+Is the chip receiving a stereo signal? 
+.PP
+\fBReturns\fP
+.RS 4
+true: Currently receiving stereo signal 
+.PP
+false: Currently receiving mono signal 
+.RE
+.PP
+
+.PP
+Definition at line 160 of file tuner\&.cpp\&.
+.SS "bool Tuner::TunedStatus ()"
+
+.PP
+Is current frequency a station? 
+.PP
+\fBReturns\fP
+.RS 4
+true: Chip is Tuned to Station 
+.PP
+false: Chip is Tuned to Station 
+.RE
+.PP
+
+.PP
+Definition at line 166 of file tuner\&.cpp\&.
+.SS "void Tuner::updateDevice (void)"
+
+.PP
+Sends updated buffers to tuner chip\&. All chages made with other API calls will not take affect until this command is called\&. 
+.PP
+Definition at line 15 of file tuner\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for RDA5807M Tuner API from the source code\&.

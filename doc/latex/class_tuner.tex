@@ -1,0 +1,465 @@
+\hypertarget{class_tuner}{}\doxysection{Tuner Class Reference}
+\label{class_tuner}\index{Tuner@{Tuner}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tuner_a53825224c69d4f6667051676617714ae}{Tuner}} (uint8\+\_\+t address, uint8\+\_\+t S\+DA, uint8\+\_\+t S\+CL, int mcu\+Clock)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_tuner}{Tuner}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tuner_afc4391a521b095c685b41f870058204f}{init}} (void)
+\begin{DoxyCompactList}\small\item\em Resets chip, enables chip, and updates both buffers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tuner_a2be8c4662b882b0a3c98daf638ad1031}{update\+Device}} (void)
+\begin{DoxyCompactList}\small\item\em Sends updated buffers to tuner chip. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tuner_a9f9a5b7ea4a40d0e5b82bfb971c2967f}{dump\+Buffers}} (uint8\+\_\+t read\mbox{[}12\mbox{]}, uint8\+\_\+t write\mbox{[}12\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em dumps buffers from M\+CU into arrays sent to function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tuner_a85477415047e4e4c55e9b6f95ca543d8}{set\+Station}} (int station)
+\begin{DoxyCompactList}\small\item\em Set the station to tune to. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tuner_a323b6a05af7afb4129bdcda5417b88db}{get\+Station}} ()
+\begin{DoxyCompactList}\small\item\em Get channel chip is tuned to currently. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tuner_a6e03bcdfce80abfb130725b0bb03a2d6}{set\+Volume}} (uint8\+\_\+t volume)
+\begin{DoxyCompactList}\small\item\em Set volume of chip audio amplifier. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_tuner_ad607304638e8e3c68f7ee7bc3af9b5c2}{get\+Volume}} ()
+\begin{DoxyCompactList}\small\item\em Get the Volume value from buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_tuner_aa3e51a5a4f94525d99b3e6bb07b99321}{get\+Signal\+Strength}} ()
+\begin{DoxyCompactList}\small\item\em Get the Signal Strength as a 7-\/bit int. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tuner_aa73e35c1e61c532b5522aead9fdc0c80}{reset\+Chip}} (bool reset\+Reg)
+\begin{DoxyCompactList}\small\item\em Calling this function preforms soft reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tuner_af05e9e97aa87337f6b2572d5eb71aa63}{enable\+Chip}} ()
+\begin{DoxyCompactList}\small\item\em Enables receiver audio amplifier of chip. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tuner_a8394d1e19515d0930ebc43ecad31217f}{disable\+Chip}} ()
+\begin{DoxyCompactList}\small\item\em Disables receiver audio amplifier of chip. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tuner_a7f06b142a09e91db9863ec25aa5049a8}{set\+Seek\+Sensitiviy}} (uint8\+\_\+t threshold)
+\begin{DoxyCompactList}\small\item\em Set the Seek Sensitivity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tuner_aaa0b9e1e9fbf58a76997dd6c37f92e33}{seek\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Command chip to preform Auto Seek Upwards. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tuner_aca10c32786c8897f0aa86d308e7ee3a9}{seek\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Command chip to preform Auto Seek Downwards. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tuner_a64058a5765fde0c58214b539bf79fbb5}{seek\+Status}} (void)
+\begin{DoxyCompactList}\small\item\em Status of most recent seek. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tuner_a3e4200e6f8f6b9d128e436148c2d0ffc}{seek\+Complete}} (void)
+\begin{DoxyCompactList}\small\item\em Status of if scan is complete. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tuner_a2d5fbe127f501d3da30d087776efb363}{S\+Tstatus}} ()
+\begin{DoxyCompactList}\small\item\em Is the chip receiving a stereo signal? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tuner_a7e5722a2901404137e1fb3f18fcd4afd}{Tuned\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Is current frequency a station? \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tuner_a20f4d1b44adbb0fd9f00505bb3542d2c}{force\+Mono}} (bool mono)
+\begin{DoxyCompactList}\small\item\em Force mono signal only. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tuner_abf4e624ea8ced0d078431e73e27a66cd}{bass\+Boost}} (bool bass)
+\begin{DoxyCompactList}\small\item\em enable bass boost option \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tuner_a0ae791ee5b9482d59e225fee7ac2fb5f}{mute}} (bool mute)
+\begin{DoxyCompactList}\small\item\em Toggle mute option, chip will still respond. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 50 of file tuner.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tuner_a53825224c69d4f6667051676617714ae}\label{class_tuner_a53825224c69d4f6667051676617714ae}} 
+\index{Tuner@{Tuner}!Tuner@{Tuner}}
+\index{Tuner@{Tuner}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{Tuner()}{Tuner()}}
+{\footnotesize\ttfamily Tuner\+::\+Tuner (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{address,  }\item[{uint8\+\_\+t}]{S\+DA,  }\item[{uint8\+\_\+t}]{S\+CL,  }\item[{int}]{mcu\+Clock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{class_tuner}{Tuner}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & I2C Address \\
+\hline
+{\em S\+DA} & Serial Data Pin \\
+\hline
+{\em S\+CL} & Serial Clock Pin \\
+\hline
+{\em mcu\+Clock} & Speed of mcu in HZ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file tuner.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tuner_abf4e624ea8ced0d078431e73e27a66cd}\label{class_tuner_abf4e624ea8ced0d078431e73e27a66cd}} 
+\index{Tuner@{Tuner}!bassBoost@{bassBoost}}
+\index{bassBoost@{bassBoost}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{bassBoost()}{bassBoost()}}
+{\footnotesize\ttfamily void Tuner\+::bass\+Boost (\begin{DoxyParamCaption}\item[{bool}]{bass }\end{DoxyParamCaption})}
+
+
+
+enable bass boost option 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bass} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 182 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_a8394d1e19515d0930ebc43ecad31217f}\label{class_tuner_a8394d1e19515d0930ebc43ecad31217f}} 
+\index{Tuner@{Tuner}!disableChip@{disableChip}}
+\index{disableChip@{disableChip}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{disableChip()}{disableChip()}}
+{\footnotesize\ttfamily void Tuner\+::disable\+Chip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disables receiver audio amplifier of chip. 
+
+
+
+Definition at line 204 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_a9f9a5b7ea4a40d0e5b82bfb971c2967f}\label{class_tuner_a9f9a5b7ea4a40d0e5b82bfb971c2967f}} 
+\index{Tuner@{Tuner}!dumpBuffers@{dumpBuffers}}
+\index{dumpBuffers@{dumpBuffers}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{dumpBuffers()}{dumpBuffers()}}
+{\footnotesize\ttfamily void Tuner\+::dump\+Buffers (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{read\mbox{[}12\mbox{]},  }\item[{uint8\+\_\+t}]{write\mbox{[}12\mbox{]} }\end{DoxyParamCaption}) const}
+
+
+
+dumps buffers from M\+CU into arrays sent to function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em read\mbox{[}12\mbox{]}} & 12 byte buffer for read data \\
+\hline
+{\em write\mbox{[}12\mbox{]}} & 12 byte buffer for write data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_af05e9e97aa87337f6b2572d5eb71aa63}\label{class_tuner_af05e9e97aa87337f6b2572d5eb71aa63}} 
+\index{Tuner@{Tuner}!enableChip@{enableChip}}
+\index{enableChip@{enableChip}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{enableChip()}{enableChip()}}
+{\footnotesize\ttfamily void Tuner\+::enable\+Chip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables receiver audio amplifier of chip. 
+
+
+
+Definition at line 199 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_a20f4d1b44adbb0fd9f00505bb3542d2c}\label{class_tuner_a20f4d1b44adbb0fd9f00505bb3542d2c}} 
+\index{Tuner@{Tuner}!forceMono@{forceMono}}
+\index{forceMono@{forceMono}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{forceMono()}{forceMono()}}
+{\footnotesize\ttfamily void Tuner\+::force\+Mono (\begin{DoxyParamCaption}\item[{bool}]{mono }\end{DoxyParamCaption})}
+
+
+
+Force mono signal only. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mono} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 174 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_aa3e51a5a4f94525d99b3e6bb07b99321}\label{class_tuner_aa3e51a5a4f94525d99b3e6bb07b99321}} 
+\index{Tuner@{Tuner}!getSignalStrength@{getSignalStrength}}
+\index{getSignalStrength@{getSignalStrength}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{getSignalStrength()}{getSignalStrength()}}
+{\footnotesize\ttfamily uint8\+\_\+t Tuner\+::get\+Signal\+Strength (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Signal Strength as a 7-\/bit int. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t strength 
+\end{DoxyReturn}
+
+
+Definition at line 116 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_a323b6a05af7afb4129bdcda5417b88db}\label{class_tuner_a323b6a05af7afb4129bdcda5417b88db}} 
+\index{Tuner@{Tuner}!getStation@{getStation}}
+\index{getStation@{getStation}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{getStation()}{getStation()}}
+{\footnotesize\ttfamily int Tuner\+::get\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get channel chip is tuned to currently. 
+
+\begin{DoxyReturn}{Returns}
+int station (Station in M\+Hz $\ast$ 10) 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_ad607304638e8e3c68f7ee7bc3af9b5c2}\label{class_tuner_ad607304638e8e3c68f7ee7bc3af9b5c2}} 
+\index{Tuner@{Tuner}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily uint8\+\_\+t Tuner\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Volume value from buffer. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t volume 
+\end{DoxyReturn}
+
+
+Definition at line 112 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_afc4391a521b095c685b41f870058204f}\label{class_tuner_afc4391a521b095c685b41f870058204f}} 
+\index{Tuner@{Tuner}!init@{init}}
+\index{init@{init}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Tuner\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Resets chip, enables chip, and updates both buffers. 
+
+
+
+Definition at line 8 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_a0ae791ee5b9482d59e225fee7ac2fb5f}\label{class_tuner_a0ae791ee5b9482d59e225fee7ac2fb5f}} 
+\index{Tuner@{Tuner}!mute@{mute}}
+\index{mute@{mute}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{mute()}{mute()}}
+{\footnotesize\ttfamily void Tuner\+::mute (\begin{DoxyParamCaption}\item[{bool}]{mute }\end{DoxyParamCaption})}
+
+
+
+Toggle mute option, chip will still respond. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mute} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 209 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_aa73e35c1e61c532b5522aead9fdc0c80}\label{class_tuner_aa73e35c1e61c532b5522aead9fdc0c80}} 
+\index{Tuner@{Tuner}!resetChip@{resetChip}}
+\index{resetChip@{resetChip}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{resetChip()}{resetChip()}}
+{\footnotesize\ttfamily void Tuner\+::reset\+Chip (\begin{DoxyParamCaption}\item[{bool}]{reset\+Reg }\end{DoxyParamCaption})}
+
+
+
+Calling this function preforms soft reset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reset\+Reg} & Also reset internal buffers as well? \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 190 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_a3e4200e6f8f6b9d128e436148c2d0ffc}\label{class_tuner_a3e4200e6f8f6b9d128e436148c2d0ffc}} 
+\index{Tuner@{Tuner}!seekComplete@{seekComplete}}
+\index{seekComplete@{seekComplete}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{seekComplete()}{seekComplete()}}
+{\footnotesize\ttfamily bool Tuner\+::seek\+Complete (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Status of if scan is complete. 
+
+\begin{DoxyReturn}{Returns}
+true\+: Scan Complete 
+
+false\+: Scan in progress 
+\end{DoxyReturn}
+
+
+Definition at line 146 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_aca10c32786c8897f0aa86d308e7ee3a9}\label{class_tuner_aca10c32786c8897f0aa86d308e7ee3a9}} 
+\index{Tuner@{Tuner}!seekDown@{seekDown}}
+\index{seekDown@{seekDown}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{seekDown()}{seekDown()}}
+{\footnotesize\ttfamily void Tuner\+::seek\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Command chip to preform Auto Seek Downwards. 
+
+
+
+Definition at line 127 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_a64058a5765fde0c58214b539bf79fbb5}\label{class_tuner_a64058a5765fde0c58214b539bf79fbb5}} 
+\index{Tuner@{Tuner}!seekStatus@{seekStatus}}
+\index{seekStatus@{seekStatus}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{seekStatus()}{seekStatus()}}
+{\footnotesize\ttfamily bool Tuner\+::seek\+Status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Status of most recent seek. 
+
+\begin{DoxyReturn}{Returns}
+true\+: Last seek Succeeded 
+
+false\+: Last seek Failed 
+\end{DoxyReturn}
+
+
+Definition at line 137 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_aaa0b9e1e9fbf58a76997dd6c37f92e33}\label{class_tuner_aaa0b9e1e9fbf58a76997dd6c37f92e33}} 
+\index{Tuner@{Tuner}!seekUp@{seekUp}}
+\index{seekUp@{seekUp}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{seekUp()}{seekUp()}}
+{\footnotesize\ttfamily void Tuner\+::seek\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Command chip to preform Auto Seek Upwards. 
+
+
+
+Definition at line 120 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_a7f06b142a09e91db9863ec25aa5049a8}\label{class_tuner_a7f06b142a09e91db9863ec25aa5049a8}} 
+\index{Tuner@{Tuner}!setSeekSensitiviy@{setSeekSensitiviy}}
+\index{setSeekSensitiviy@{setSeekSensitiviy}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{setSeekSensitiviy()}{setSeekSensitiviy()}}
+{\footnotesize\ttfamily void Tuner\+::set\+Seek\+Sensitiviy (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{threshold }\end{DoxyParamCaption})}
+
+
+
+Set the Seek Sensitivity. 
+
+Send a 4-\/bit number to set the signal to noise ratio of detected signal
+
+
+\begin{DoxyParams}{Parameters}
+{\em threshold} & (default\+: 1000) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 152 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_a85477415047e4e4c55e9b6f95ca543d8}\label{class_tuner_a85477415047e4e4c55e9b6f95ca543d8}} 
+\index{Tuner@{Tuner}!setStation@{setStation}}
+\index{setStation@{setStation}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{setStation()}{setStation()}}
+{\footnotesize\ttfamily void Tuner\+::set\+Station (\begin{DoxyParamCaption}\item[{int}]{station }\end{DoxyParamCaption})}
+
+
+
+Set the station to tune to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em station} & (Station in M\+Hz $\ast$ 10) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 61 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_a6e03bcdfce80abfb130725b0bb03a2d6}\label{class_tuner_a6e03bcdfce80abfb130725b0bb03a2d6}} 
+\index{Tuner@{Tuner}!setVolume@{setVolume}}
+\index{setVolume@{setVolume}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{setVolume()}{setVolume()}}
+{\footnotesize\ttfamily int Tuner\+::set\+Volume (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{volume }\end{DoxyParamCaption})}
+
+
+
+Set volume of chip audio amplifier. 
+
+Will return error if integer given is out of range
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & (0 to 15) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 99 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_a2d5fbe127f501d3da30d087776efb363}\label{class_tuner_a2d5fbe127f501d3da30d087776efb363}} 
+\index{Tuner@{Tuner}!STstatus@{STstatus}}
+\index{STstatus@{STstatus}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{STstatus()}{STstatus()}}
+{\footnotesize\ttfamily bool Tuner\+::\+S\+Tstatus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Is the chip receiving a stereo signal? 
+
+\begin{DoxyReturn}{Returns}
+true\+: Currently receiving stereo signal 
+
+false\+: Currently receiving mono signal 
+\end{DoxyReturn}
+
+
+Definition at line 160 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_a7e5722a2901404137e1fb3f18fcd4afd}\label{class_tuner_a7e5722a2901404137e1fb3f18fcd4afd}} 
+\index{Tuner@{Tuner}!TunedStatus@{TunedStatus}}
+\index{TunedStatus@{TunedStatus}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{TunedStatus()}{TunedStatus()}}
+{\footnotesize\ttfamily bool Tuner\+::\+Tuned\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Is current frequency a station? 
+
+\begin{DoxyReturn}{Returns}
+true\+: Chip is Tuned to Station 
+
+false\+: Chip is Tuned to Station 
+\end{DoxyReturn}
+
+
+Definition at line 166 of file tuner.\+cpp.
+
+\mbox{\Hypertarget{class_tuner_a2be8c4662b882b0a3c98daf638ad1031}\label{class_tuner_a2be8c4662b882b0a3c98daf638ad1031}} 
+\index{Tuner@{Tuner}!updateDevice@{updateDevice}}
+\index{updateDevice@{updateDevice}!Tuner@{Tuner}}
+\doxysubsubsection{\texorpdfstring{updateDevice()}{updateDevice()}}
+{\footnotesize\ttfamily void Tuner\+::update\+Device (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Sends updated buffers to tuner chip. 
+
+All chages made with other A\+PI calls will not take affect until this command is called. 
+
+Definition at line 15 of file tuner.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{tuner_8h}{tuner.\+h}}\item 
+source/tuner.\+cpp\end{DoxyCompactItemize}

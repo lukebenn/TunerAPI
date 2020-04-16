@@ -1,0 +1,39 @@
+h1 {
+  font-size: 1.4pc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1pc;
+  margin-right: 200px;
+  margin-left: 15px;
+}
+li {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1pc;
+  margin-right: 220px;
+}
+dd, dt, tr {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1pc;
+}
+.memtitle {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: inherit;
+  font-size: 1.5pc;
+  padding-bottom: 4px;
+}
+.groupheader {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.8pc;
+}
+.title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#projectname {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2pc;
+  font-weight: bolder;
+  margin-top: 0.5pc;
+  margin-bottom: 0.5pc;
+}

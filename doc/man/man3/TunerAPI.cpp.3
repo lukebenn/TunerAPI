@@ -1,0 +1,78 @@
+.TH "source/TunerAPI.cpp" 3 "Wed Apr 15 2020" "Version v1.0" "RDA5807M Tuner API" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+source/TunerAPI.cpp \- API example and application entry point\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'LPC802\&.h'\fP
+.br
+\fC#include 'tuner\&.h'\fP
+.br
+\fC#include 'i2c\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBI2C_BAUD\fP   (100000)"
+.br
+.ti -1c
+.RI "#define \fBMAIN_CLK\fP   (12000000)"
+.br
+.ti -1c
+.RI "#define \fBTUNER_ADDRESS\fP   (0x10)"
+.br
+.ti -1c
+.RI "#define \fBSDA_PIN\fP   (10)"
+.br
+.ti -1c
+.RI "#define \fBSCL_PIN\fP   (16)"
+.br
+.ti -1c
+.RI "#define \fBDEBUG\fP   1"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (void)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBDumpedReadBuf\fP [12]"
+.br
+.ti -1c
+.RI "uint8_t \fBDumpedWriteBuf\fP [12]"
+.br
+.ti -1c
+.RI "\fBTuner\fP \fBtuner\fP (TUNER_ADDRESS, SDA_PIN, SCL_PIN, MAIN_CLK)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+API example and application entry point\&. 
+
+Provides an example of the working program (DEBUG is enabled) 
+.PP
+Definition in file \fBTunerAPI\&.cpp\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "uint8_t DumpedReadBuf[12]"
+6 16-bit registers with a high and low byte separated 
+.PP
+Definition at line 75 of file TunerAPI\&.cpp\&.
+.SS "uint8_t DumpedWriteBuf[12]"
+6 16-bit registers with a high and low byte separated 
+.PP
+Definition at line 76 of file TunerAPI\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for RDA5807M Tuner API from the source code\&.

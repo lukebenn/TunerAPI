@@ -1,0 +1,111 @@
+\hypertarget{tuner_8h}{}\doxysection{source/tuner.h File Reference}
+\label{tuner_8h}\index{source/tuner.h@{source/tuner.h}}
+
+
+\mbox{\hyperlink{class_tuner}{Tuner}} A\+PI for R\+D\+A5807M FM Chip.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_tuner}{Tuner}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{tuner_8h_a8d8fc6e1f147ffe04d4ec8c2b7a8239a}\label{tuner_8h_a8d8fc6e1f147ffe04d4ec8c2b7a8239a}} 
+\#define {\bfseries L\+P\+C\+\_\+\+I2\+C0\+B\+U\+F\+F\+E\+R\+Size}~(35)
+\item 
+\mbox{\Hypertarget{tuner_8h_a8c31b178a5f94b6b060e8f4ed88a1d29}\label{tuner_8h_a8c31b178a5f94b6b060e8f4ed88a1d29}} 
+\#define {\bfseries L\+P\+C\+\_\+\+I2\+C0\+B\+A\+U\+D\+Rate}~(100000)
+\item 
+\mbox{\Hypertarget{tuner_8h_a59f7e3092a1b34a0b9635632dc89a06b}\label{tuner_8h_a59f7e3092a1b34a0b9635632dc89a06b}} 
+\#define {\bfseries C\+H\+A\+N\+\_\+\+S\+P\+A\+C\+I\+NG}~(100000\+UL)
+\item 
+\mbox{\Hypertarget{tuner_8h_aec00b0af426cd51bd5c148eb55391fa8}\label{tuner_8h_aec00b0af426cd51bd5c148eb55391fa8}} 
+\#define {\bfseries C\+H\+A\+N\+\_\+\+S\+P\+A\+C\+I\+N\+G\+\_\+\+B\+IT}~(00\+UL)
+\item 
+\mbox{\Hypertarget{tuner_8h_a830982a0da311e98e390b8fc743f48f4}\label{tuner_8h_a830982a0da311e98e390b8fc743f48f4}} 
+\#define {\bfseries B\+A\+N\+D\+\_\+\+R\+E\+G\+I\+ON}~(00\+UL)
+\item 
+\mbox{\Hypertarget{tuner_8h_a2c95122b4a67b7faac2799786d27e99f}\label{tuner_8h_a2c95122b4a67b7faac2799786d27e99f}} 
+\#define {\bfseries S\+T\+A\+R\+T\+\_\+\+F\+R\+EQ}~(870)
+\item 
+\mbox{\Hypertarget{tuner_8h_a614616856b9a8bacdd366b4a0eeb7bf3}\label{tuner_8h_a614616856b9a8bacdd366b4a0eeb7bf3}} 
+\#define {\bfseries S\+T\+O\+P\+\_\+\+F\+R\+EQ}~(1080)
+\item 
+\mbox{\Hypertarget{tuner_8h_a0623070407840a0af5a74e0407195f5a}\label{tuner_8h_a0623070407840a0af5a74e0407195f5a}} 
+\#define {\bfseries T\+O\+T\+A\+L\+W\+R\+I\+T\+E\+\_\+\+R\+EG}~(6)
+\item 
+\mbox{\Hypertarget{tuner_8h_af8c9617714db2d24762858182df24ee9}\label{tuner_8h_af8c9617714db2d24762858182df24ee9}} 
+\#define {\bfseries T\+O\+T\+A\+L\+R\+E\+A\+D\+\_\+\+R\+EG}~(5)
+\item 
+\mbox{\Hypertarget{tuner_8h_ac625a1a380addcc304d4cb92e6efc4ac}\label{tuner_8h_ac625a1a380addcc304d4cb92e6efc4ac}} 
+\#define {\bfseries S\+E\+E\+K\+D\+I\+R\+\_\+\+M\+A\+SK}~(0b00000010)
+\item 
+\mbox{\Hypertarget{tuner_8h_a4f45f82fb08c35567e710e170b65daba}\label{tuner_8h_a4f45f82fb08c35567e710e170b65daba}} 
+\#define {\bfseries S\+E\+E\+K\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+M\+A\+SK}~(0b00000001)
+\item 
+\mbox{\Hypertarget{tuner_8h_aa5c3f657e59553b9b8b26cfe939ed30f}\label{tuner_8h_aa5c3f657e59553b9b8b26cfe939ed30f}} 
+\#define {\bfseries S\+E\+E\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+M\+A\+SK}~(0b00001111)
+\item 
+\mbox{\Hypertarget{tuner_8h_ad3698d777f967ab3683da483eecba439}\label{tuner_8h_ad3698d777f967ab3683da483eecba439}} 
+\#define {\bfseries T\+U\+N\+E\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+M\+A\+SK}~(0b00010000)
+\item 
+\mbox{\Hypertarget{tuner_8h_a0299ade931f4d53cfe057748c279efa9}\label{tuner_8h_a0299ade931f4d53cfe057748c279efa9}} 
+\#define {\bfseries T\+U\+N\+E\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+\_\+\+M\+A\+SK}~(0b01000000)
+\item 
+\mbox{\Hypertarget{tuner_8h_ac6c26c536fe89c8f45852329c0c5b151}\label{tuner_8h_ac6c26c536fe89c8f45852329c0c5b151}} 
+\#define {\bfseries B\+A\+N\+D\+\_\+\+M\+A\+SK}~(0b00001100)
+\item 
+\mbox{\Hypertarget{tuner_8h_a87037590ebfa874b9d203f1f4ec61d18}\label{tuner_8h_a87037590ebfa874b9d203f1f4ec61d18}} 
+\#define {\bfseries S\+T\+E\+R\+O\+\_\+\+I\+N\+D\+I\+C\+A\+T\+O\+R\+\_\+\+M\+A\+SK}~(0b00000100)
+\item 
+\mbox{\Hypertarget{tuner_8h_a575d88fc63527080122601aa48bfbf36}\label{tuner_8h_a575d88fc63527080122601aa48bfbf36}} 
+\#define {\bfseries S\+E\+E\+K\+\_\+\+F\+A\+I\+L\+\_\+\+M\+A\+SK}~(0b00100000)
+\item 
+\mbox{\Hypertarget{tuner_8h_a1a342e15b3458d2af52ad3ea6535f96e}\label{tuner_8h_a1a342e15b3458d2af52ad3ea6535f96e}} 
+\#define {\bfseries S\+E\+E\+K\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+\_\+\+M\+A\+SK}~(0b01000000)
+\item 
+\mbox{\Hypertarget{tuner_8h_a0bd68bc9b4ddf951784ec92550eeb094}\label{tuner_8h_a0bd68bc9b4ddf951784ec92550eeb094}} 
+\#define {\bfseries V\+O\+L\+U\+M\+E\+\_\+\+M\+A\+SK}~(0b00001111)
+\item 
+\mbox{\Hypertarget{tuner_8h_ae1388f35619b3fa7e648cde3bda5ab21}\label{tuner_8h_ae1388f35619b3fa7e648cde3bda5ab21}} 
+\#define {\bfseries M\+U\+T\+E\+\_\+\+M\+A\+SK}~(0b01000000)
+\item 
+\mbox{\Hypertarget{tuner_8h_ae27be935d5b62e3341b452b7e4d6d6f0}\label{tuner_8h_ae27be935d5b62e3341b452b7e4d6d6f0}} 
+\#define {\bfseries M\+O\+N\+O\+\_\+\+M\+A\+SK}~(0b00100000)
+\item 
+\mbox{\Hypertarget{tuner_8h_add0928531a2bd995b206f8d00f1f5521}\label{tuner_8h_add0928531a2bd995b206f8d00f1f5521}} 
+\#define {\bfseries B\+A\+S\+S\+\_\+\+M\+A\+SK}~(0b00010000)
+\item 
+\mbox{\Hypertarget{tuner_8h_aa8285c4cc28cba5c201b76b25d02a9bf}\label{tuner_8h_aa8285c4cc28cba5c201b76b25d02a9bf}} 
+\#define {\bfseries R\+E\+S\+E\+T\+\_\+\+M\+A\+SK}~(0b00000010)
+\item 
+\mbox{\Hypertarget{tuner_8h_a668ef5c699426237f86f59fb33a906f6}\label{tuner_8h_a668ef5c699426237f86f59fb33a906f6}} 
+\#define {\bfseries E\+N\+A\+B\+L\+E\+\_\+\+M\+A\+SK}~(0b00000001)
+\item 
+\mbox{\Hypertarget{tuner_8h_a3e8d659925365d495c2dc9b97e90d932}\label{tuner_8h_a3e8d659925365d495c2dc9b97e90d932}} 
+\#define {\bfseries R\+S\+S\+I\+\_\+\+M\+A\+SK}~(0b11111110)
+\item 
+\mbox{\Hypertarget{tuner_8h_a9f58d28fd9ce6e6d692977ae431c2693}\label{tuner_8h_a9f58d28fd9ce6e6d692977ae431c2693}} 
+\#define {\bfseries F\+M\+\_\+\+T\+R\+U\+E\+\_\+\+M\+A\+SK}~(0b00000001)
+\item 
+\mbox{\Hypertarget{tuner_8h_a802b9981276f413ee4af7755dcc66dc6}\label{tuner_8h_a802b9981276f413ee4af7755dcc66dc6}} 
+\#define {\bfseries R\+E\+A\+D\+C\+H\+A\+N\+\_\+\+M\+A\+S\+K\+\_\+\+L\+OW}~(0b11111111)
+\item 
+\mbox{\Hypertarget{tuner_8h_ad7de160fbf2e48185f960176f28bd02b}\label{tuner_8h_ad7de160fbf2e48185f960176f28bd02b}} 
+\#define {\bfseries R\+E\+A\+D\+C\+H\+A\+N\+\_\+\+M\+A\+S\+K\+\_\+\+H\+I\+GH}~(0b00000011)
+\item 
+\mbox{\Hypertarget{tuner_8h_ae0344f5ea839d164f5fee2418bc28d28}\label{tuner_8h_ae0344f5ea839d164f5fee2418bc28d28}} 
+\#define {\bfseries W\+R\+I\+T\+E\+C\+H\+A\+N\+\_\+\+M\+A\+S\+K\+\_\+\+L\+OW}~(0b11000000)
+\item 
+\mbox{\Hypertarget{tuner_8h_a35c97eab938775cec3a0c808da3d37a7}\label{tuner_8h_a35c97eab938775cec3a0c808da3d37a7}} 
+\#define {\bfseries W\+R\+I\+T\+E\+C\+H\+A\+N\+\_\+\+M\+A\+S\+K\+\_\+\+H\+I\+GH}~(0b11111111)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_tuner}{Tuner}} A\+PI for R\+D\+A5807M FM Chip. 
+
+All commands related to controlling chip, not including R\+DS commands 
