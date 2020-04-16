@@ -59,5 +59,12 @@ Next is to initialize i2c followed by the tuner. The order is very important\+:
 \end{DoxyCode}
 
 
-Everything is now set and you are ready to run any of the commands found in the \mbox{\hyperlink{class_tuner}{Tuner}} class.\hypertarget{index_Need}{}\doxysection{Need a working example?}\label{index_Need}
+Everything is now set and you are ready to run any of the commands found in the \mbox{\hyperlink{class_tuner}{Tuner}} class.\hypertarget{index_Debugging}{}\doxysection{Debugging}\label{index_Debugging}
+Currently adding the line\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define DEBUG 1}}
+\end{DoxyCode}
+
+
+Will allow you to run the program without interfacing with the device. The intention is to allow you to easily modify the buffers and see them change with not device connected.\hypertarget{index_Need}{}\doxysection{Need a working example?}\label{index_Need}
 The whole github repo is a working M\+C\+U\+Xpresso project made for the L\+P\+C802! 

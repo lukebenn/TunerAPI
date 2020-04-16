@@ -27,6 +27,7 @@ var NAVTREE =
     [ "Prerequisites", "index.html#Prerequisites", null ],
     [ "Install", "index.html#Install", null ],
     [ "Usage", "index.html#Usage", null ],
+    [ "Debugging", "index.html#Debugging", null ],
     [ "Need a working example?", "index.html#Need", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

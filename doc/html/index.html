@@ -17,7 +17,6 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="template.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -130,6 +129,10 @@ Usage</h1>
 <p>Next is to initialize i2c followed by the tuner. The order is very important: </p><div class="fragment"><div class="line"><a class="code" href="i2c_8h.html#a394e6ed780b8effde32fd02c8a1d910f">I2Cinit</a>(I2C_BAUD,MAIN_CLK);</div>
 <div class="line">tuner.<a class="code" href="class_tuner.html#afc4391a521b095c685b41f870058204f">init</a>();</div>
 </div><!-- fragment --><p>Everything is now set and you are ready to run any of the commands found in the <a class="el" href="class_tuner.html">Tuner</a> class.</p>
+<h1><a class="anchor" id="Debugging"></a>
+Debugging</h1>
+<p>Currently adding the line: </p><div class="fragment"><div class="line"><span class="preprocessor">#define DEBUG 1</span></div>
+</div><!-- fragment --><p>Will allow you to run the program without interfacing with the device. The intention is to allow you to easily modify the buffers and see them change with not device connected.</p>
 <h1><a class="anchor" id="Need"></a>
 Need a working example?</h1>
 <p>The whole github repo is a working MCUXpresso project made for the LPC802! </p>

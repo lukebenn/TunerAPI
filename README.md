@@ -50,6 +50,15 @@ tuner.init();
 ```
 Everything is now set and you are ready to run any of the commands found in the tuner class.
 
+## Debugging
+
+Currently adding the line:
+```C++
+#define DEBUG 1
+```
+
+Will allow you to run the program without interfacing with the device. The intention is to allow you to easily modify the buffers and see them change with not device connected.
+
 ## Need a working example?
 
 This whole repo is a working MCUXpresso project made for the LPC802!

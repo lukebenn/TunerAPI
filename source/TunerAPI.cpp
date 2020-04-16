@@ -58,6 +58,15 @@
  * ```
  * Everything is now set and you are ready to run any of the commands found in the Tuner class.
  *
+ * 
+ * @section Debugging
+ * 
+ * Currently adding the line:
+ * ```
+ * #define DEBUG 1
+ * ```
+ * 
+ * Will allow you to run the program without interfacing with the device. The intention is to allow you to easily modify the buffers and see them change with not device connected.
  *
  * @section Need Need a working example?
  * 
