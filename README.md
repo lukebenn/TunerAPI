@@ -62,7 +62,7 @@ or
 tuner.seekUp();
 ```
 
-###Quick Tip!
+### Quick Tip!
 Commands that write data to RDA5807M update device immediately.  
 All commands that read data do not update device immediately.  
 
