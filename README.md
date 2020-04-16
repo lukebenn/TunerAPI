@@ -5,7 +5,7 @@ A C++ API for operating the RDA5807M FM chip using I2C on an LPC802 MCU
 
 To use this file on other project you need the following:  
  - LPC802 MCU  
- - MCUxpresso Version XX.XX  
+ - MCUxpresso Version 11.1.0 or Later 
  - LPC802 SDK  
  - C++ project  
 

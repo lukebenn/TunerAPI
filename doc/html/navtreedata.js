@@ -23,12 +23,10 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "RDA5807M Tuner API", "index.html", [
-    [ "kill", "index.html", [
-      [ "Introduction", "index.html#Introduction", null ],
-      [ "Prerequisites", "index.html#Prerequisites", null ],
-      [ "Install", "index.html#Install", null ],
-      [ "Usage", "index.html#Usage", null ]
-    ] ],
+    [ "Introduction", "index.html#Introduction", null ],
+    [ "Prerequisites", "index.html#Prerequisites", null ],
+    [ "Install", "index.html#Install", null ],
+    [ "Usage", "index.html#Usage", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mute_16',['mute',['../class_tuner.html#a0ae791ee5b9482d59e225fee7ac2fb5f',1,'Tuner']]]
+  ['resetchip_16',['resetChip',['../class_tuner.html#aa73e35c1e61c532b5522aead9fdc0c80',1,'Tuner']]]
 ];

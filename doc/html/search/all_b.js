@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['updatedevice_30',['updateDevice',['../class_tuner.html#a2be8c4662b882b0a3c98daf638ad1031',1,'Tuner']]]
+  ['waiti2cmasterstate_30',['WaitI2CMasterState',['../i2c_8h.html#a3e4113f39d55f6974113590b2396fb4d',1,'i2c.cpp']]]
 ];
