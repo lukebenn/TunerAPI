@@ -1,11 +1,13 @@
 # TunerAPI
-A C++ API for operating the RDA5807M FM chip using I2C on an LPC802 MCU
+A C++ API for operating the RDA5807M FM chip using I2C on an LPC802 MCU  
+  
+Created for an undergraduate project for the course EECS 3215.
 
 ## Prerequisites
 
 To use this file on other project you need the following:  
  - LPC802 MCU  
- - MCUxpresso Version 11.1.0 or Later 
+ - MCUXpresso Version 11.1.0 or Later 
  - LPC802 SDK  
  - C++ project  
 
@@ -47,3 +49,7 @@ I2Cinit(I2C_BAUD,MAIN_CLK);
 tuner.init();
 ```
 Everything is now set and you are ready to run any of the commands found in the tuner class.
+
+## Need a working example?
+
+This whole repo is a working MCUXpresso project made for the LPC802!

@@ -88,56 +88,55 @@ $(document).ready(function(){initNavTree('_tuner_a_p_i_8cpp_source.html',''); in
 </div><!--header-->
 <div class="contents">
 <a href="_tuner_a_p_i_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#include &quot;LPC802.h&quot;</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="tuner_8h.html">tuner.h</a>&quot;</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="i2c_8h.html">i2c.h</a>&quot;</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#define I2C_BAUD        (100000)</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#define MAIN_CLK        (12000000)</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#define TUNER_ADDRESS   (0x10)</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#define SDA_PIN         (10)</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#define SCL_PIN         (16)</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#define DEBUG           1   //Allows program to run without tuner connected</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="_tuner_a_p_i_8cpp.html#aa09d1d969c4e553d1774a6946a949eb0">   77</a></span>&#160;uint8_t <a class="code" href="_tuner_a_p_i_8cpp.html#aa09d1d969c4e553d1774a6946a949eb0">DumpedReadBuf</a>[12];  </div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="_tuner_a_p_i_8cpp.html#a66db7bf04b0dcabc5e34466fc45c7805">   78</a></span>&#160;uint8_t <a class="code" href="_tuner_a_p_i_8cpp.html#a66db7bf04b0dcabc5e34466fc45c7805">DumpedWriteBuf</a>[12];  </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"> * @brief   Application entry point.</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"> * This simple program runs a few tuner commands and</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"> * enters an infinite loop.</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<a class="code" href="class_tuner.html">Tuner</a> tuner(TUNER_ADDRESS,SDA_PIN,SCL_PIN, MAIN_CLK);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">int</span> main(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="i2c_8h.html#a394e6ed780b8effde32fd02c8a1d910f">I2Cinit</a>(I2C_BAUD,MAIN_CLK);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    tuner.<a class="code" href="class_tuner.html#afc4391a521b095c685b41f870058204f">init</a>();</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    tuner.<a class="code" href="class_tuner.html#a9f9a5b7ea4a40d0e5b82bfb971c2967f">dumpBuffers</a>(<a class="code" href="_tuner_a_p_i_8cpp.html#aa09d1d969c4e553d1774a6946a949eb0">DumpedReadBuf</a>, <a class="code" href="_tuner_a_p_i_8cpp.html#a66db7bf04b0dcabc5e34466fc45c7805">DumpedWriteBuf</a>);   <span class="comment">//Breakpoint here and debug</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    tuner.<a class="code" href="class_tuner.html#a85477415047e4e4c55e9b6f95ca543d8">setStation</a>(1073);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    tuner.<a class="code" href="class_tuner.html#a9f9a5b7ea4a40d0e5b82bfb971c2967f">dumpBuffers</a>(<a class="code" href="_tuner_a_p_i_8cpp.html#aa09d1d969c4e553d1774a6946a949eb0">DumpedReadBuf</a>, <a class="code" href="_tuner_a_p_i_8cpp.html#a66db7bf04b0dcabc5e34466fc45c7805">DumpedWriteBuf</a>);   <span class="comment">//Breakpoint here and debug</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    tuner.<a class="code" href="class_tuner.html#a6e03bcdfce80abfb130725b0bb03a2d6">setVolume</a>(6);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    tuner.<a class="code" href="class_tuner.html#a9f9a5b7ea4a40d0e5b82bfb971c2967f">dumpBuffers</a>(<a class="code" href="_tuner_a_p_i_8cpp.html#aa09d1d969c4e553d1774a6946a949eb0">DumpedReadBuf</a>, <a class="code" href="_tuner_a_p_i_8cpp.html#a66db7bf04b0dcabc5e34466fc45c7805">DumpedWriteBuf</a>);   <span class="comment">//Breakpoint here and debug</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    tuner.<a class="code" href="class_tuner.html#a2be8c4662b882b0a3c98daf638ad1031">updateDevice</a>();   <span class="comment">//Any information that is read will not update device immediately,</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                            <span class="comment">//update must be preformed first.</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">int</span> station = tuner.<a class="code" href="class_tuner.html#a323b6a05af7afb4129bdcda5417b88db">getStation</a>();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">while</span>(1) {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">asm</span>(<span class="stringliteral">&quot;nop&quot;</span>);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> 0 ;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#include &quot;LPC802.h&quot;</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="tuner_8h.html">tuner.h</a>&quot;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="i2c_8h.html">i2c.h</a>&quot;</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#define I2C_BAUD        (100000)</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#define MAIN_CLK        (12000000)</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#define TUNER_ADDRESS   (0x10)</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#define SDA_PIN         (10)</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#define SCL_PIN         (16)</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#define DEBUG           1   //Allows program to run without tuner connected</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;uint8_t DumpedReadBuf[12];  <span class="comment">// 6 16-bit registers with a high and low byte separated</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;uint8_t DumpedWriteBuf[12];  <span class="comment">// 6 16-bit registers with a high and low byte separated</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"> * @brief   Application entry point.</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"> * This simple program runs a few tuner commands and</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"> * enters an infinite loop.</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<a class="code" href="class_tuner.html">Tuner</a> tuner(TUNER_ADDRESS,SDA_PIN,SCL_PIN, MAIN_CLK);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">int</span> main(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="i2c_8h.html#a394e6ed780b8effde32fd02c8a1d910f">I2Cinit</a>(I2C_BAUD,MAIN_CLK);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    tuner.<a class="code" href="class_tuner.html#afc4391a521b095c685b41f870058204f">init</a>();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    tuner.<a class="code" href="class_tuner.html#a9f9a5b7ea4a40d0e5b82bfb971c2967f">dumpBuffers</a>(DumpedReadBuf, DumpedWriteBuf);   <span class="comment">//Breakpoint here and debug</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    tuner.<a class="code" href="class_tuner.html#a85477415047e4e4c55e9b6f95ca543d8">setStation</a>(1073);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    tuner.<a class="code" href="class_tuner.html#a9f9a5b7ea4a40d0e5b82bfb971c2967f">dumpBuffers</a>(DumpedReadBuf, DumpedWriteBuf);   <span class="comment">//Breakpoint here and debug</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    tuner.<a class="code" href="class_tuner.html#a6e03bcdfce80abfb130725b0bb03a2d6">setVolume</a>(6);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    tuner.<a class="code" href="class_tuner.html#a9f9a5b7ea4a40d0e5b82bfb971c2967f">dumpBuffers</a>(DumpedReadBuf, DumpedWriteBuf);   <span class="comment">//Breakpoint here and debug</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    tuner.<a class="code" href="class_tuner.html#a2be8c4662b882b0a3c98daf638ad1031">updateDevice</a>();   <span class="comment">//Any information that is read will not update device immediately,</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                            <span class="comment">//update must be preformed first.</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">int</span> station = tuner.<a class="code" href="class_tuner.html#a323b6a05af7afb4129bdcda5417b88db">getStation</a>();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keyword">asm</span>(<span class="stringliteral">&quot;nop&quot;</span>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span> 0 ;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_tuner_html_a9f9a5b7ea4a40d0e5b82bfb971c2967f"><div class="ttname"><a href="class_tuner.html#a9f9a5b7ea4a40d0e5b82bfb971c2967f">Tuner::dumpBuffers</a></div><div class="ttdeci">void dumpBuffers(uint8_t read[12], uint8_t write[12]) const</div><div class="ttdoc">dumps buffers from MCU into arrays sent to function</div><div class="ttdef"><b>Definition:</b> <a href="tuner_8cpp_source.html#l00020">tuner.cpp:20</a></div></div>
-<div class="ttc" id="a_tuner_a_p_i_8cpp_html_a66db7bf04b0dcabc5e34466fc45c7805"><div class="ttname"><a href="_tuner_a_p_i_8cpp.html#a66db7bf04b0dcabc5e34466fc45c7805">DumpedWriteBuf</a></div><div class="ttdeci">uint8_t DumpedWriteBuf[12]</div><div class="ttdef"><b>Definition:</b> <a href="_tuner_a_p_i_8cpp_source.html#l00078">TunerAPI.cpp:78</a></div></div>
 <div class="ttc" id="aclass_tuner_html"><div class="ttname"><a href="class_tuner.html">Tuner</a></div><div class="ttdef"><b>Definition:</b> <a href="tuner_8h_source.html#l00050">tuner.h:50</a></div></div>
 <div class="ttc" id="atuner_8h_html"><div class="ttname"><a href="tuner_8h.html">tuner.h</a></div><div class="ttdoc">Tuner API for RDA5807M FM Chip.</div></div>
 <div class="ttc" id="ai2c_8h_html_a394e6ed780b8effde32fd02c8a1d910f"><div class="ttname"><a href="i2c_8h.html#a394e6ed780b8effde32fd02c8a1d910f">I2Cinit</a></div><div class="ttdeci">void I2Cinit(int baud, int mcuClock)</div><div class="ttdoc">Initalizes I2C module with default pins.</div><div class="ttdef"><b>Definition:</b> <a href="i2c_8cpp_source.html#l00006">i2c.cpp:6</a></div></div>
 <div class="ttc" id="aclass_tuner_html_a323b6a05af7afb4129bdcda5417b88db"><div class="ttname"><a href="class_tuner.html#a323b6a05af7afb4129bdcda5417b88db">Tuner::getStation</a></div><div class="ttdeci">int getStation()</div><div class="ttdoc">Get channel chip is tuned to currently.</div><div class="ttdef"><b>Definition:</b> <a href="tuner_8cpp_source.html#l00082">tuner.cpp:82</a></div></div>
-<div class="ttc" id="a_tuner_a_p_i_8cpp_html_aa09d1d969c4e553d1774a6946a949eb0"><div class="ttname"><a href="_tuner_a_p_i_8cpp.html#aa09d1d969c4e553d1774a6946a949eb0">DumpedReadBuf</a></div><div class="ttdeci">uint8_t DumpedReadBuf[12]</div><div class="ttdef"><b>Definition:</b> <a href="_tuner_a_p_i_8cpp_source.html#l00077">TunerAPI.cpp:77</a></div></div>
 <div class="ttc" id="aclass_tuner_html_afc4391a521b095c685b41f870058204f"><div class="ttname"><a href="class_tuner.html#afc4391a521b095c685b41f870058204f">Tuner::init</a></div><div class="ttdeci">void init(void)</div><div class="ttdoc">Resets chip, enables chip, and updates both buffers.</div><div class="ttdef"><b>Definition:</b> <a href="tuner_8cpp_source.html#l00008">tuner.cpp:8</a></div></div>
 <div class="ttc" id="aclass_tuner_html_a6e03bcdfce80abfb130725b0bb03a2d6"><div class="ttname"><a href="class_tuner.html#a6e03bcdfce80abfb130725b0bb03a2d6">Tuner::setVolume</a></div><div class="ttdeci">int setVolume(uint8_t volume)</div><div class="ttdoc">Set volume of chip audio amplifier.</div><div class="ttdef"><b>Definition:</b> <a href="tuner_8cpp_source.html#l00099">tuner.cpp:99</a></div></div>
 <div class="ttc" id="aclass_tuner_html_a85477415047e4e4c55e9b6f95ca543d8"><div class="ttname"><a href="class_tuner.html#a85477415047e4e4c55e9b6f95ca543d8">Tuner::setStation</a></div><div class="ttdeci">void setStation(int station)</div><div class="ttdoc">Set the station to tune to.</div><div class="ttdef"><b>Definition:</b> <a href="tuner_8cpp_source.html#l00061">tuner.cpp:61</a></div></div>

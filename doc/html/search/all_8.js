@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['seekcomplete_17',['seekComplete',['../class_tuner.html#a3e4200e6f8f6b9d128e436148c2d0ffc',1,'Tuner']]],
-  ['seekdown_18',['seekDown',['../class_tuner.html#aca10c32786c8897f0aa86d308e7ee3a9',1,'Tuner']]],
-  ['seekstatus_19',['seekStatus',['../class_tuner.html#a64058a5765fde0c58214b539bf79fbb5',1,'Tuner']]],
-  ['seekup_20',['seekUp',['../class_tuner.html#aaa0b9e1e9fbf58a76997dd6c37f92e33',1,'Tuner']]],
-  ['setseeksensitiviy_21',['setSeekSensitiviy',['../class_tuner.html#a7f06b142a09e91db9863ec25aa5049a8',1,'Tuner']]],
-  ['setstation_22',['setStation',['../class_tuner.html#a85477415047e4e4c55e9b6f95ca543d8',1,'Tuner']]],
-  ['setvolume_23',['setVolume',['../class_tuner.html#a6e03bcdfce80abfb130725b0bb03a2d6',1,'Tuner']]],
-  ['ststatus_24',['STstatus',['../class_tuner.html#a2d5fbe127f501d3da30d087776efb363',1,'Tuner']]]
+  ['seekcomplete_15',['seekComplete',['../class_tuner.html#a3e4200e6f8f6b9d128e436148c2d0ffc',1,'Tuner']]],
+  ['seekdown_16',['seekDown',['../class_tuner.html#aca10c32786c8897f0aa86d308e7ee3a9',1,'Tuner']]],
+  ['seekstatus_17',['seekStatus',['../class_tuner.html#a64058a5765fde0c58214b539bf79fbb5',1,'Tuner']]],
+  ['seekup_18',['seekUp',['../class_tuner.html#aaa0b9e1e9fbf58a76997dd6c37f92e33',1,'Tuner']]],
+  ['setseeksensitiviy_19',['setSeekSensitiviy',['../class_tuner.html#a7f06b142a09e91db9863ec25aa5049a8',1,'Tuner']]],
+  ['setstation_20',['setStation',['../class_tuner.html#a85477415047e4e4c55e9b6f95ca543d8',1,'Tuner']]],
+  ['setvolume_21',['setVolume',['../class_tuner.html#a6e03bcdfce80abfb130725b0bb03a2d6',1,'Tuner']]],
+  ['ststatus_22',['STstatus',['../class_tuner.html#a2d5fbe127f501d3da30d087776efb363',1,'Tuner']]]
 ];

@@ -87,7 +87,9 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="title">RDA5807M Tuner API Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="Introduction"></a>
+<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Luke Bennett</dd></dl>
+<p>Created for an undergraduate project for the course EECS 3215.</p>
+<h1><a class="anchor" id="Introduction"></a>
 Introduction</h1>
 <p>This is a C++ API for operating the RDA5807M FM chip using I2C on an LPC802 MCU</p>
 <h1><a class="anchor" id="Prerequisites"></a>
@@ -96,7 +98,7 @@ Prerequisites</h1>
 </p><ul>
 <li>LPC802 MCU <br  />
 </li>
-<li>MCUxpresso Version 11.1.0 or Later <br  />
+<li>MCUXpresso Version 11.1.0 or Later <br  />
 </li>
 <li>LPC802 SDK <br  />
 </li>
@@ -127,7 +129,10 @@ Usage</h1>
 </div><!-- fragment --><p>The I2C address is: <em>0x10</em></p>
 <p>Next is to initialize i2c followed by the tuner. The order is very important: </p><div class="fragment"><div class="line"><a class="code" href="i2c_8h.html#a394e6ed780b8effde32fd02c8a1d910f">I2Cinit</a>(I2C_BAUD,MAIN_CLK);</div>
 <div class="line">tuner.<a class="code" href="class_tuner.html#afc4391a521b095c685b41f870058204f">init</a>();</div>
-</div><!-- fragment --><p>Everything is now set and you are ready to run any of the commands found in the <a class="el" href="class_tuner.html">Tuner</a> class. </p>
+</div><!-- fragment --><p>Everything is now set and you are ready to run any of the commands found in the <a class="el" href="class_tuner.html">Tuner</a> class.</p>
+<h1><a class="anchor" id="Need"></a>
+Need a working example?</h1>
+<p>The whole github repo is a working MCUXpresso project made for the LPC802! </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
