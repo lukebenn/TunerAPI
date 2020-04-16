@@ -5,11 +5,11 @@ Created for an undergraduate project for the course EECS 3215.
 
 ## Prerequisites
 
-To use this file on other project you need the following:  
+To use this API on other project you need the following:  
  - LPC802 MCU  
  - MCUXpresso Version 11.1.0 or Later 
  - LPC802 SDK  
- - C++ project  
+ - Your C++ project  
 
 ## Install
 
